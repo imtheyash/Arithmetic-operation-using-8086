@@ -56,16 +56,23 @@ END
 #### Output Table
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|                         |                          |
-
+| 1200:12                            1204:24
+  1201:34----------------------- | - 1205:68----------------------- |
+| 1202:12                       |                          |
+  1203:34
 #### Manual Calculations
+![WhatsApp Image 2025-08-26 at 13 03 20_72476653](https://github.com/user-attachments/assets/990a3d21-6b28-408c-8d7f-81af5562fb7e)
 
 (Add your calculation here)
+
 
 ---
 
 ## OUTPUT IMAGE FROM MASM SOFTWARE
+<img width="640" height="480" alt="Screenshot (14)" src="https://github.com/user-attachments/assets/9b28d177-c43b-4bec-b57e-2feee9761dfb" />
+<img width="640" height="480" alt="Screenshot (5)" src="https://github.com/user-attachments/assets/d02fa21d-9a4d-450c-81e4-88152c57bbd5" />
+
+
 
 ## 2. SUBTRACTION
 
@@ -83,16 +90,35 @@ END
 
 
 #### Program
+code segment
+assume cs:code,ds:code
+org 1000h 
+mov si, 1200h 
+mov ax, [si]
+mov bx, [si+02h]  
+mov cl,00h 
+sub ax, bx 
+jnc 11 
+inc cl 
+11:mov[si+04h], ax 
+mov [si+06h],cl 
+mov ah,4ch
+int 21h 
+code ends 
+end
 
 
 
 #### Output Table
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|                         |                          |
-
+| 1200:12----------------------- | 1204:00------------------------ |
+| 1201:34                       |  1205:00                        |
+  1202:12
+  1203:34
+   
 #### Manual Calculations
+![WhatsApp Image 2025-08-26 at 13 03 21_5cdaf738](https://github.com/user-attachments/assets/f6cddbb0-00fe-495d-90ea-2964fb6bb4ab)
 
 (Add your calculation here)
 
@@ -100,6 +126,10 @@ END
 
 
 ## OUTPUT SCREEN FROM MASM SOFTWARE
+<img width="640" height="480" alt="Screenshot (15)" src="https://github.com/user-attachments/assets/27f06838-30e6-44e5-be57-f3fb44da582f" />
+<img width="640" height="480" alt="Screenshot (6)" src="https://github.com/user-attachments/assets/c1ba9b51-17ae-4d98-945c-95a61ed82927" />
+
+
 
 ## 3. MULTIPLICATION
 
@@ -138,16 +168,22 @@ END
 #### Output Table
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|                         |                          |
-
+| -1200:12---------------------- | 1204:44------------------------ |
+|  1201:34                      |  1205:51                       |
+   1202:12                         1206:97
+   1203:34                         1207:OA
 #### Manual Calculations
+![WhatsApp Image 2025-08-26 at 13 03 21_7d2dc15a](https://github.com/user-attachments/assets/d30575f2-f17d-41bb-ba4a-f16a1775f0fe)
 
 (Add your calculation here)
 
 ---
 
 ## OUTPUT SCREEN FROM MASM SOFTWARE
+<img width="640" height="480" alt="Screenshot (12)" src="https://github.com/user-attachments/assets/c13cd18f-06f0-4547-9be8-22ef531ab0f5" />
+<img width="640" height="480" alt="Screenshot (7)" src="https://github.com/user-attachments/assets/b4bf9b95-d4d0-4f89-945c-7b5e26588190" />
+
+
 
 ## 4. DIVISION
 
@@ -183,15 +219,21 @@ END
 #### Output Table
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|                         |                          |
-
+| -1200:12---------------------- | 1204:01------------------------ |
+|  1201:34                       | 1205:00                         |
+   1202:12                          1206:00
+   1203:34                          1207:00 
 #### Manual Calculations
+![WhatsApp Image 2025-08-26 at 13 03 22_c956ba73](https://github.com/user-attachments/assets/97afe8ab-a245-48e9-96f6-37bb5a13cf91)
 
 (Add your calculation here)
 
 ---
 ## OUTPUT FROM MASM SOFTWARE
+<img width="640" height="480" alt="Screenshot (13)" src="https://github.com/user-attachments/assets/54390627-62b5-4df0-9e3d-28f3777f7c8a" />
+<img width="640" height="480" alt="Screenshot (8)" src="https://github.com/user-attachments/assets/d0b65b3c-4b46-4dd5-9660-f7631569c08c" />
+
+
 
 
 
